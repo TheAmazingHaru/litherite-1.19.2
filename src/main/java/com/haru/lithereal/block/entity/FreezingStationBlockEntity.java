@@ -159,8 +159,10 @@ public class FreezingStationBlockEntity extends BlockEntity implements MenuProvi
 
     private static int getBlockCoolingPower(FreezingStationBlockEntity entity, Block block) {
         int cooling = 0;
-        if(block == Blocks.PACKED_ICE) cooling += 1;
-        if(block == ModBlocks.COOLED_LITHERITE_BLOCK.get()) cooling += 2;
+        if(block == Blocks.ICE) cooling += 1;
+        if(block == Blocks.PACKED_ICE) cooling += 2;
+        if(block == Blocks.BLUE_ICE) cooling += 3;
+        if(block == ModBlocks.COOLED_LITHERITE_BLOCK.get()) cooling += 4;
 
         return cooling;
     }

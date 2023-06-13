@@ -4,7 +4,7 @@ plugins {
     id 'net.minecraftforge.gradle' version '5.1.+'
 }
 
-version = '1.1.0'
+version = '1.2.0-1.19.2-FORGE'
 group = 'com.haru.lithereal'
 archivesBaseName = 'lithereal'
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -98,7 +98,7 @@ jar {
         attributes([
                 "Specification-Title"     : "lithereal",
                 "Specification-Vendor"    : "Tim_, Haru",
-                "Specification-Version"   : "1.1.0",
+                "Specification-Version"   : "1.2.0-1.19.2-FORGE",
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "Tim_, Haru",

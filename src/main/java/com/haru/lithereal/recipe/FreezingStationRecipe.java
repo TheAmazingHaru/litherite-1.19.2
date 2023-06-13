@@ -33,7 +33,7 @@ public class FreezingStationRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public ItemStack assemble(SimpleContainer p_44001_) {
-        return null;
+        return output;
     }
 
     @Override
@@ -67,7 +67,7 @@ public class FreezingStationRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public ItemStack getResultItem() {
-        return null;
+        return output;
     }
 
     @Override
