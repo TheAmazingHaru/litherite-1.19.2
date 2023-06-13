@@ -3,6 +3,10 @@ package com.haru.lithereal.block;
 import com.haru.lithereal.Lithereal;
 import com.haru.lithereal.block.custom.BlueFireBlock;
 import com.haru.lithereal.block.custom.BurningLitheriteBlock;
+import com.haru.lithereal.block.custom.FireCrucibleBlock;
+import com.haru.lithereal.block.custom.FreezingStationBlock;
+import com.haru.lithereal.item.ModCreativeModeTabs;
+import com.haru.lithereal.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -15,9 +19,6 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import com.haru.lithereal.block.custom.FireCrucibleBlock;
-import com.haru.lithereal.block.custom.FreezingStationBlock;
-import com.haru.lithereal.item.ModItems;
 
 import java.util.function.Supplier;
 
@@ -70,7 +71,7 @@ public class ModBlocks {
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties()));
+                new Item.Properties().tab(ModCreativeModeTabs.LITHEREAL_TAB)));
     }
 
     private static <T extends Block> RegistryObject<T> registerHeatedBlock(String name, Supplier<T> block) {
@@ -81,7 +82,7 @@ public class ModBlocks {
 
     private static <T extends Block> RegistryObject<Item> registerHeatedBlockItem(String name, RegistryObject<T> block) {
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties().fireResistant()));
+                new Item.Properties().fireResistant().tab(ModCreativeModeTabs.LITHEREAL_TAB)));
     }
 
     public static void register(IEventBus eventBus) {
